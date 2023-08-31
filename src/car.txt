@@ -1,0 +1,2 @@
+{"brand":"Toyota","model":"camry","color":"White","milaage":200000}
+By default
