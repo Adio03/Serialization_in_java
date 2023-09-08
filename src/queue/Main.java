@@ -1,5 +1,6 @@
 package queue;
 
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -7,6 +8,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 
 public class Main {
     public static void main(String[] args) {
+        Comparator<Candidate> comparator = (firstCandidate,secondCandidate)->
+                                            firstCandidate.getParty().compareTo(secondCandidate.getParty());
         Queue<Candidate> candidates = new PriorityQueue<>();
         candidates.offer(new Candidate("Asiwaju","Apc"));
         candidates.offer(new Candidate("Rabiu Kwankwaso","NNPP"));
@@ -15,12 +18,7 @@ public class Main {
         candidates.offer(new Candidate("Chimezie","OPC"));
 
 
-        System.out.println("Before "+ candidates);
-        candidates.poll();
-
-        System.out.println("After "+ candidates);
-
-
+        System.out.println("Before:: "+ candidates);
     }
 
 }
